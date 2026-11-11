@@ -1,0 +1,29 @@
+:root{--maroon:#7a1c1c;--bg:#f4f4f6;--card:#fff;--text:#222;--err:#c62828;--ok:#2e7d32;--warn:#ef6c00}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{background:var(--maroon);color:#fff;padding:.8rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+header h1{font-size:1.15rem;margin:0}
+.badge{background:var(--ok);padding:.2rem .6rem;border-radius:99px;font-size:.8rem;white-space:nowrap}
+.badge.offline{background:var(--warn)}
+main{display:grid;gap:1rem;padding:1rem;max-width:1100px;margin:auto;grid-template-columns:1fr}
+@media(min-width:800px){main{grid-template-columns:380px 1fr;align-items:start}}
+.card{background:var(--card);border-radius:10px;padding:1rem;box-shadow:0 1px 4px #0002}
+h2{margin-top:0;font-size:1.1rem}
+label{display:block;margin-top:.7rem;font-weight:600;font-size:.9rem}
+input,select,textarea,button{width:100%;padding:.55rem;margin-top:.25rem;font:inherit;border:1px solid #bbb;border-radius:6px}
+input.invalid,select.invalid,textarea.invalid{border-color:var(--err)}
+.err{color:var(--err);display:block;min-height:1em}
+button{background:var(--maroon);color:#fff;border:0;margin-top:1rem;cursor:pointer;font-weight:600}
+button:disabled{opacity:.6;cursor:wait}
+.sim{font-weight:400;font-size:.8rem;color:#666}
+.sim input{width:auto;margin-right:.4rem}
+.toolbar{display:grid;gap:.5rem;grid-template-columns:1fr}
+@media(min-width:500px){.toolbar{grid-template-columns:2fr 1fr}}
+.req{border:1px solid #ddd;border-left:5px solid var(--maroon);border-radius:6px;padding:.7rem;margin-top:.7rem}
+.req .id{font-family:monospace;font-weight:700;color:var(--maroon)}
+.req p{margin:.4rem 0}
+.meta{font-size:.8rem;color:#666}
+.empty{color:#777;text-align:center;padding:1rem}
+#toasts{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);width:min(92%,420px);z-index:9}
+.toast{padding:.7rem 1rem;border-radius:6px;color:#fff;margin-top:.5rem;box-shadow:0 2px 6px #0004}
+.toast.success{background:var(--ok)}.toast.error{background:var(--err)}.toast.info{background:#455a64}

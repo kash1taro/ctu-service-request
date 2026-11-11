@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#7a1c1c" />
+    <title>CTU Smart Campus Service Request System</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CTU Smart Campus Service Request</h1>
+      <span id="netBadge" class="badge">Online</span>
+    </header>
+    <main>
+      <section class="card" aria-labelledby="formTitle">
+        <h2 id="formTitle">New Service Request</h2>
+        <form id="requestForm" novalidate>
+          <label for="studentName">Student Name</label>
+          <input id="studentName" type="text" placeholder="Juan Dela Cruz" />
+          <small class="err" id="err-studentName"></small>
+
+          <label for="concernType">Type of Concern</label>
+          <select id="concernType"></select>
+          <small class="err" id="err-concernType"></small>
+
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            rows="4"
+            placeholder="Describe the concern (min. 10 characters)"
+          ></textarea>
+          <small class="err" id="err-description"></small>
+
+          <label for="requestDate">Date of Request</label>
+          <input id="requestDate" type="date" />
+          <small class="err" id="err-requestDate"></small>
+
+          <button type="submit" id="submitBtn">Submit Request</button>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="listTitle">
+        <h2 id="listTitle">Service Requests</h2>
+        <div class="toolbar">
+          <input
+            id="searchBox"
+            type="search"
+            placeholder="Search by Request ID or name"
+          />
+          <select id="statusFilter" aria-label="Filter by status"></select>
+        </div>
+        <div id="requestList" aria-live="polite"></div>
+      </section>
+    </main>
+    <div id="toasts" aria-live="assertive"></div>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

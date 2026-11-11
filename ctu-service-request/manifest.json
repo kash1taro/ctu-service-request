@@ -1,0 +1,11 @@
+{
+  "name": "CTU Smart Campus Service Request System",
+  "short_name": "CTU Requests",
+  "description": "Report and track campus service requests.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f4f6",
+  "theme_color": "#7a1c1c",
+  "icons": [{"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}]
+}
